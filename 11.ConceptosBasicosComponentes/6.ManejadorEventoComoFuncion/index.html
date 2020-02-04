@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ManejadorEventoComoFuncion</title>
+</head>
+<body>
+    <div id="app-blog">
+        <div :style="{ fontSize: postFontSize + 'em' }">
+            <blog-post 
+             v-for="post in posts"
+             v-bind:key="post.id"
+             v-bind:post="post"
+             v-on:enlarge-text="onChangeSizeText('e', 0.1)"
+             v-on:reduce-text="onChangeSizeText('r', 0.1)"
+            ></blog-post>
+        </div>
+    </div>
+
+    <script src="http://unpkg.com/vue"></script>
+    <script src="./app.js"></script>
+</body>
+</html>|
